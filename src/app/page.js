@@ -79,7 +79,7 @@ const recentActivity = [
   { user: "Alert", action: "High search volume in 'Data Science'", time: "1 hour ago" },
 ];
 
-/* ---------------- PAGE ---------------- */
+/* ---------------- PAGE ----------------- */
 
 export default function DashboardHome() {
   const [dateRange, setDateRange] = useState("30d");
