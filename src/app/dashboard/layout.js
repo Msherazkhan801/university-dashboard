@@ -72,7 +72,7 @@ export default function DashboardLayout({ children }) {
         <div className="flex items-center gap-4 font-bold text-sm">
         {/* Optimized Next.js Image */}
         <Image
-          src={"https://api.agsapakistan.com/resources/new_logo.svg" }
+          src="/updateLogo.svg" 
           alt="AGSA Logo" 
           width={32} 
           height={32}
@@ -80,9 +80,7 @@ export default function DashboardLayout({ children }) {
         />
         
         {/* Brand Name using your custom Navy color */}
-        <span>
-          University Dashboard
-        </span>
+        
       </div>
 
           <Button
