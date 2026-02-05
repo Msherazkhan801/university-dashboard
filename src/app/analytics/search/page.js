@@ -99,10 +99,10 @@ export default function SearchAnalytics() {
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <Button variant="outline" className="gap-2">
-              <Download className="h-4 w-4" /> Export
+            <Button variant="outline" className="gap-2 ">
+              <Download className="h-4 w-4 " /> Export
             </Button>
-            <Button className="gap-2">
+            <Button className="gap-2 bg-[#1c1b4b] font-bold">
               <Filter className="h-4 w-4" /> Filters
             </Button>
           </div>
@@ -144,8 +144,8 @@ export default function SearchAnalytics() {
               </SelectContent>
             </Select>
             <div className="ml-auto flex gap-2">
-              <Button variant="default" size="sm">Apply Filters</Button>
-              <Button variant="ghost" size="sm" className="text-slate-500">Reset</Button>
+              <Button variant="default" size="sm" className={"bg-[#1c1b4b] font-bold text-white hover:bg-[#E0AA00]"}>Apply Filters</Button>
+              <Button variant="ghost" size="sm" className="bg-[#E0AA00] font-bold text-white hover:bg-[#1c1b4b]">Reset</Button>
             </div>
           </CardContent>
         </Card>
@@ -338,8 +338,8 @@ export default function SearchAnalytics() {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Top Programs Table */}
           <Card className="lg:col-span-3 shadow-sm border-slate-200">
-            <CardHeader>
-              <CardTitle>Top Searched Programs</CardTitle>
+            <CardHeader >
+              <CardTitle >Top Searched Programs</CardTitle>
             </CardHeader>
             <CardContent>
               <Table>

@@ -111,7 +111,7 @@ export default function DashboardHome() {
             </SelectContent>
           </Select>
 
-          <Button className={"bg-[#2563EB] text-white"}>Download Report</Button>
+          <Button className={"bg-[#1c1b4b] font-bold text-white"}>Download Report</Button>
         </div>
       </div>
 

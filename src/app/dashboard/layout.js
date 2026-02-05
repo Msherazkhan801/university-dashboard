@@ -59,17 +59,17 @@ export default function DashboardLayout({ children }) {
   ];
 
   return (
-    <div className="min-h-screen bg-slate-50 flex text-slate-900">
+    <div className="min-h-screen bg-[#1c1b4b] flex text-slate-900">
       {/* Sidebar */}
       <aside
         className={cn(
-          "fixed inset-y-0 left-0 z-50 w-64 bg-slate-900 text-white transition-transform lg:translate-x-0 lg:static flex flex-col",
+          "fixed inset-y-0 left-0 z-50 w-64 bg-[#1c1b4b] text-white transition-transform lg:translate-x-0 lg:static flex flex-col",
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         )}
       >
         <div className="h-16 flex items-center px-6 border-b border-slate-800">
           <div className="flex items-center gap-2 font-bold text-xl">
-            <div className="w-8 h-8 rounded bg-blue-600 flex items-center justify-center">
+            <div className="w-8 h-8 rounded bg-[#E0AA00] flex items-center justify-center">
               A
             </div>
             AGSPortals
@@ -136,7 +136,7 @@ export default function DashboardLayout({ children }) {
                   className={cn(
                     "flex items-center gap-3 px-3 py-2 rounded-md text-sm",
                     isActive(item.path)
-                      ? "bg-blue-600 text-white"
+                      ? "bg-[#E0AA00] text-white"
                       : "text-slate-400 hover:bg-slate-800 hover:text-white"
                   )}
                 >
