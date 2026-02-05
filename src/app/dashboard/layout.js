@@ -16,7 +16,7 @@ import {
   Menu,
   X,
   ChevronDown,
-  LogOut
+  LogOut,
 } from "lucide-react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -30,6 +30,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function DashboardLayout({ children }) {
   const pathname = usePathname();
@@ -64,16 +65,25 @@ export default function DashboardLayout({ children }) {
       <aside
         className={cn(
           "fixed inset-y-0 left-0 z-50 w-64 bg-[#1c1b4b] text-white transition-transform lg:translate-x-0 lg:static flex flex-col",
-          sidebarOpen ? "translate-x-0" : "-translate-x-full"
+          sidebarOpen ? "translate-x-0" : "-translate-x-full",
         )}
       >
         <div className="h-16 flex items-center px-6 border-b border-slate-800">
-          <div className="flex items-center gap-2 font-bold text-xl">
-            <div className="w-8 h-8 rounded bg-[#E0AA00] flex items-center justify-center">
-              A
-            </div>
-            AGSPortals
-          </div>
+        <div className="flex items-center gap-4 font-bold text-sm">
+        {/* Optimized Next.js Image */}
+        <Image
+          src="https://api.agsapakistan.com/resources/new_logo.svg" 
+          alt="AGSA Logo" 
+          width={32} 
+          height={32}
+          className="w-auto h-8"
+        />
+        
+        {/* Brand Name using your custom Navy color */}
+        <span>
+          University Dashboard
+        </span>
+      </div>
 
           <Button
             variant="ghost"
@@ -96,7 +106,7 @@ export default function DashboardLayout({ children }) {
                       "w-full flex items-center justify-between px-3 py-2 rounded-md text-sm",
                       pathname.startsWith("/analytics")
                         ? "bg-slate-800 text-white"
-                        : "text-slate-400 hover:bg-slate-800 hover:text-white"
+                        : "text-slate-400 hover:bg-slate-800 hover:text-white",
                     )}
                   >
                     <div className="flex items-center gap-3">
@@ -106,7 +116,7 @@ export default function DashboardLayout({ children }) {
                     <ChevronDown
                       className={cn(
                         "h-4 w-4 transition-transform",
-                        analyticsOpen && "rotate-180"
+                        analyticsOpen && "rotate-180",
                       )}
                     />
                   </button>
@@ -121,7 +131,7 @@ export default function DashboardLayout({ children }) {
                             "block px-3 py-2 rounded-md text-sm",
                             isActive(sub.path)
                               ? "text-blue-400 bg-blue-400/10"
-                              : "text-slate-400 hover:bg-slate-800 hover:text-white"
+                              : "text-slate-400 hover:bg-slate-800 hover:text-white",
                           )}
                         >
                           {sub.label}
@@ -137,7 +147,7 @@ export default function DashboardLayout({ children }) {
                     "flex items-center gap-3 px-3 py-2 rounded-md text-sm",
                     isActive(item.path)
                       ? "bg-[#E0AA00] text-white"
-                      : "text-slate-400 hover:bg-slate-800 hover:text-white"
+                      : "text-slate-400 hover:bg-slate-800 hover:text-white",
                   )}
                 >
                   <item.icon className="h-5 w-5" />
@@ -171,36 +181,51 @@ export default function DashboardLayout({ children }) {
           >
             <Menu />
           </Button>
-            <div className="relative hidden md:block w-96">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
-              <input
-                type="text"
-                placeholder="Search for students, programs, or reports..."
-                className="w-full pl-10 pr-4 py-2 rounded-full border border-slate-200 bg-slate-50 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
-              />
-            </div>
+          <div className="relative hidden md:block w-96">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-slate-400" />
+            <input
+              type="text"
+              placeholder="Search for students, programs, or reports..."
+              className="w-full pl-10 pr-4 py-2 rounded-full border border-slate-200 bg-slate-50 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/20 focus:border-blue-500 transition-all"
+            />
+          </div>
 
           <div className="flex items-center gap-4  ml-auto ">
-            <Button variant="ghost" size="icon" className="relative text-slate-500 hover:text-slate-700">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="relative text-slate-500 hover:text-slate-700"
+            >
               <Bell className="h-5 w-5" />
               <span className="absolute top-2 right-2 h-2 w-2 rounded-full bg-red-500 border-2 border-white"></span>
             </Button>
 
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" className="flex items-center gap-2 pl-2 pr-4 py-1 h-auto hover:bg-slate-50 rounded-full border border-transparent hover:border-slate-200 transition-all">
+                <Button
+                  variant="ghost"
+                  className="flex items-center gap-2 pl-2 pr-4 py-1 h-auto hover:bg-slate-50 rounded-full border border-transparent hover:border-slate-200 transition-all"
+                >
                   <Avatar className="h-8 w-8 border border-slate-200">
-                    <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
+                    <AvatarImage
+                      src="https://github.com/shadcn.png"
+                      alt="@shadcn"
+                    />
                     <AvatarFallback>JS</AvatarFallback>
                   </Avatar>
                   <div className="hidden md:flex flex-col items-start text-xs">
-                    <span className="font-semibold text-slate-700">John Smith</span>
+                    <span className="font-semibold text-slate-700">
+                      John Smith
+                    </span>
                     <span className="text-slate-500">Admin</span>
                   </div>
                   <ChevronDown className="h-3 w-3 text-black ml-1" />
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-56 bg-white text-black">
+              <DropdownMenuContent
+                align="end"
+                className="w-56 bg-white text-black"
+              >
                 <DropdownMenuLabel>My Account</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem>Profile</DropdownMenuItem>
@@ -216,9 +241,7 @@ export default function DashboardLayout({ children }) {
           </div>
         </header>
 
-        <main className="flex-1 p-4 lg:p-8 bg-slate-50">
-          {children}
-        </main>
+        <main className="flex-1 p-4 lg:p-8 bg-slate-50">{children}</main>
       </div>
     </div>
   );

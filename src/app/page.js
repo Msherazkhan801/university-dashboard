@@ -87,7 +87,7 @@ export default function DashboardHome() {
   return (
     <>
       {/* Header */}
-      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2">
         <div>
           <h1 className="text-3xl font-bold text-slate-900">
             Dashboard Overview

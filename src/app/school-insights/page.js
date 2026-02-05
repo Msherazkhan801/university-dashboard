@@ -82,7 +82,7 @@ export default function SchoolInsights() {
                 <SelectItem value="last_year">2024-2025</SelectItem>
               </SelectContent>
             </Select>
-            <Button>Download Report</Button>
+            <Button className={"bg-[#1c1b4b] font-bold text-white"}>Download Report</Button>
           </div>
         </div>
 
@@ -92,7 +92,7 @@ export default function SchoolInsights() {
             <CardContent className="p-6">
               <div className="flex items-center gap-3 mb-2">
                 <div className="p-2 bg-blue-100 rounded-lg text-blue-600">
-                  <Target className="h-5 w-5" />
+                  <Target className="h-5 w-5 text-[#1c1b4b]" />
                 </div>
                 <h3 className="font-semibold text-blue-900">Curriculum Focus</h3>
               </div>
