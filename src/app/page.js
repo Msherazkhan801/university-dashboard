@@ -346,7 +346,7 @@ export default function DashboardHome() {
           </CardContent>
         </Card>
 
-        <Card className="shadow-sm border-slate-200 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
+        <Card className="shadow-sm border-slate-200 bg-gradient-to-br from-[#1c1b4b]/70 to-[#1c1b4b] text-white">
           <CardHeader>
             <CardTitle className="text-white">Quick Actions</CardTitle>
             <CardDescription className="text-blue-100">Common tasks and shortcuts</CardDescription>

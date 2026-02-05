@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
+import logo from "../../../public/updateLogo.svg"
 import {
   LayoutDashboard,
   BarChart3,
@@ -72,7 +72,7 @@ export default function DashboardLayout({ children }) {
         <div className="flex items-center gap-4 font-bold text-sm">
         {/* Optimized Next.js Image */}
         <Image
-          src="https://api.agsapakistan.com/resources/new_logo.svg" 
+          src={"https://api.agsapakistan.com/resources/new_logo.svg" }
           alt="AGSA Logo" 
           width={32} 
           height={32}
